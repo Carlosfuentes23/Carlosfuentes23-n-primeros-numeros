@@ -34,7 +34,12 @@ def es_primo(num):
 #Funcón principal
 def main():
    print("La siguiente aplicación calcula los primeros n números pares, impares y primos. \nPor favor a continuación ingrese un número cualquiera.")
-   n = int(input("Ingrese el número n: "))
+   while True:
+      try:
+         n = int(input("Ingrese el número n: "))
+         break
+      except ValueError:
+         print("Lo valores introducidos no son correctos.")
    if (n > 0):
       pares(n)
       impares(n)
